@@ -1,0 +1,139 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.calculator {
+  background: #1e1e2e;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  width: 320px;
+}
+
+/* Display */
+.display {
+  background: #13131f;
+  border-radius: 12px;
+  padding: 20px 16px 12px;
+  margin-bottom: 20px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.expression {
+  color: #6e6e8a;
+  font-size: 14px;
+  min-height: 20px;
+  word-break: break-all;
+  text-align: right;
+  margin-bottom: 4px;
+}
+
+.result {
+  color: #e2e2f0;
+  font-size: 40px;
+  font-weight: 300;
+  word-break: break-all;
+  text-align: right;
+  line-height: 1.1;
+  transition: font-size 0.1s;
+}
+
+/* Button grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* Base button */
+.btn {
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  height: 64px;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.15s;
+  outline: none;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.94);
+}
+
+/* Number buttons */
+.btn-number {
+  background: #2a2a3e;
+  color: #e2e2f0;
+}
+
+.btn-number:hover {
+  background: #35354f;
+}
+
+/* Operator buttons */
+.btn-operator {
+  background: #252540;
+  color: #7c7cf0;
+}
+
+.btn-operator:hover {
+  background: #2f2f55;
+}
+
+/* Clear / Backspace */
+.btn-clear {
+  background: #3a1a2e;
+  color: #f07c9e;
+}
+
+.btn-clear:hover {
+  background: #4a2238;
+}
+
+.btn-action {
+  background: #3a1a2e;
+  color: #f07c9e;
+}
+
+.btn-action:hover {
+  background: #4a2238;
+}
+
+/* Equals button */
+.btn-equals {
+  background: linear-gradient(135deg, #7c7cf0, #5c5cd0);
+  color: #ffffff;
+  box-shadow: 0 4px 15px rgba(124, 124, 240, 0.4);
+}
+
+.btn-equals:hover {
+  background: linear-gradient(135deg, #9090f5, #7070e0);
+  box-shadow: 0 6px 20px rgba(124, 124, 240, 0.5);
+}
+
+/* Shrink text for long results */
+.result.small {
+  font-size: 28px;
+}
+
+.result.xsmall {
+  font-size: 20px;
+}
