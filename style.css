@@ -113,6 +113,11 @@ body {
   box-shadow: none !important;
 }
 
+.btn:focus-visible {
+  outline: 3px solid #2d3561;
+  outline-offset: 2px;
+}
+
 /* Number buttons – warm yellow */
 .btn-number {
   background: #ffe066;
